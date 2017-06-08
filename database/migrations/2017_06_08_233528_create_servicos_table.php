@@ -15,6 +15,17 @@ class CreateServicosTable extends Migration
     {
         Schema::create('servicos', function (Blueprint $table) {
             $table->increments('id');
+            $table->char('mes', 20);
+            $table->integer(atendimento);
+            $table->integer(atoinfracional);
+            $table->integer(denunciasrecebidas);
+            $table->integer(indiciplinaescolar);
+            $table->integer(notificacao);
+            $table->integer(representacaoministerio);
+            $table->integer(requisicaocreche);
+            $table->integer(requisicaosaude);
+            $table->integer(requisicaoservicosocial);
+            $table->integer(suspeitaabuso);
             $table->timestamps();
         });
     }
