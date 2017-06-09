@@ -15,6 +15,14 @@ class CreateGrupofamiliarTable extends Migration
     {
         Schema::create('grupofamiliar', function (Blueprint $table) {
             $table->increments('id');
+            $table->char('nome', 100);
+            $table->char('nis', 20);
+            $table->char('sexo', 1);
+            $table->longText('familia');
+            $table->char('endereco', 50);
+            $table->char('bairro', 50);
+            $table->date(datanascimento);
+            $table->char('paif', 5);
             $table->timestamps();
         });
     }
