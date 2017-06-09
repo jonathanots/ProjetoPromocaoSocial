@@ -5,7 +5,7 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminParticipantesoficinasController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminParticipantesController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
@@ -25,13 +25,13 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "participantesoficinas";
+			$this->table = "participantes";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
 			$this->col[] = ["label"=>"Nome","name"=>"nome"];
-			$this->col[] = ["label"=>"CPF","name"=>"cpf"];
+			$this->col[] = ["label"=>"Nº do CPF","name"=>"cpf"];
 			$this->col[] = ["label"=>"Oficina","name"=>"oficina"];
 			$this->col[] = ["label"=>"Endereço","name"=>"endereco"];
 			$this->col[] = ["label"=>"Telefone","name"=>"telefone"];
@@ -41,7 +41,7 @@
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'Nome','name'=>'nome','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'CPF','name'=>'cpf','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Nº do CPF','name'=>'cpf','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Oficina','name'=>'oficina','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Endereço','name'=>'endereco','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Telefone','name'=>'telefone','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
@@ -51,7 +51,7 @@
 			# OLD START FORM
 			//$this->form = [];
 			//$this->form[] = ["label"=>"Nome","name"=>"nome","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
-			//$this->form[] = ["label"=>"Cpf","name"=>"cpf","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0"];
+			//$this->form[] = ["label"=>"Cpf","name"=>"cpf","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
 			//$this->form[] = ["label"=>"Oficina","name"=>"oficina","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
 			//$this->form[] = ["label"=>"Endereco","name"=>"endereco","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
 			//$this->form[] = ["label"=>"Telefone","name"=>"telefone","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
